@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Interface Evaluation Survey</title>
 </head>
 
 <body>
     <header>Mackador Warfa</header>
     <div class="overview">
         <h1>SEG 3125 - User Interface Evaluation Survey</h1>
-        <p>Hi! Thank you for checking out this short survey. We're interested in your feedback on the user interface of <a href="https://musclewiki.com/">Muscle Wiki</a>.</p>
+        <p>Hi! Thank you for checking out this short survey. We're interested in your feedback on the user interface of the <a href="https://musclewiki.com/">Muscle Wiki</a> website.</p>
         <a href="https://musclewiki.com/"><img src="https://musclewiki.com/static/images/logo.png" alt="Muscle Wiki"></a>
     </div>
 
@@ -20,6 +20,12 @@
 
     <div class="page_content">
         <form>
+
+            <div class="question">
+                <h3>Please enter your email address</h3>
+                <input type="email" name="user_info" id="email_address" placeholder="Email Address">
+            </div>
+
             <div class="question">
                 <h3>The user interface is intuitive and easy to use</h3>
                 <input type="radio" name="ease_of_use" id="strongly_disagree">
@@ -27,7 +33,7 @@
                 <input type="radio" name="ease_of_use" id="strongly_disagree">
                 <label for="strongly_disagree">Slightly Disagree</label>
                 <input type="radio" name="ease_of_use" id="strongly_disagree">
-                <label for="strongly_disagree">Neutral</label>
+                <label for="strongly_disagree">Indifferent</label>
                 <input type="radio" name="ease_of_use" id="strongly_disagree">
                 <label for="strongly_disagree">Slightly Agree</label>
                 <input type="radio" name="ease_of_use" id="strongly_disagree">
@@ -43,7 +49,7 @@
             </div>
     
             <div class="question">
-                <h3>If you answered yes to the previous question, let us know what muscle groups are you interested in working out?</h3>
+                <h3>If yes, let us know what muscle groups are you interested in working out!</h3>
                 <input type="checkbox" name="muscles" id="abs">
                 <label for="abs">Abs</label><br>
                 <input type="checkbox" name="muscles" id="arms">
@@ -55,21 +61,13 @@
                 <input type="checkbox" name="muscles" id="legs">
                 <label for="legs">Legs</label>
             </div>
-    
-            <div class="question">
-                <h3>Please enter your name and email address below</h3>
-                <label for="name">Name</label><br>
-                <input type="text" name="user_info" id="name"><br>
-                <label for="email_address">Email address</label><br>
-                <input type="email" name="user_info" id="email_address">
-            </div>
-    
+
             <div class="question">
                 <h3>Do you have any additional feedback on the website?</h3>
                 <textarea name="additional_comments" id="additional_comments" cols="30" rows="5"></textarea>
             </div>
     
-            <div class="center">
+            <div class="submit">
                 <input type="submit" value="Submit">
             </div>
     
