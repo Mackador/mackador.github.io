@@ -1,78 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Interface Evaluation Survey</title>
+    <! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
-    <header>Mackador Warfa</header>
-    <div class="overview">
-        <h1>SEG 3125 - User Interface Evaluation Survey</h1>
-        <p>Hi! Thank you for checking out this short survey. We're interested in your feedback on the user interface of the <a href="https://musclewiki.com/">Muscle Wiki</a> website.</p>
-        <a href="https://musclewiki.com/"><img src="https://musclewiki.com/static/images/logo.png" alt="Muscle Wiki"></a>
+<body onload="populateListProductChoices('displayProduct', 'nutAllergy', 'lactoseIntolerance', 'organic')">
+
+    <header>
+        Mini Online Grocery Site
+    </header>
+
+    <!-- Tab links, each one with an onclick event associated with it -->
+    <div class="tab">
+        <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+        <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+        <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
     </div>
 
-    <hr>
-
-    <div class="page_content">
-        <form>
-
-            <div class="question">
-                <h3>Please enter your email address</h3>
-                <input type="email" name="user_info" id="email_address" placeholder="Email Address">
-            </div>
-
-            <div class="question">
-                <h3>The user interface is intuitive and easy to use</h3>
-                <input type="radio" name="ease_of_use" id="strongly_disagree">
-                <label for="strongly_disagree">Strongly Disagree</label>
-                <input type="radio" name="ease_of_use" id="strongly_disagree">
-                <label for="strongly_disagree">Slightly Disagree</label>
-                <input type="radio" name="ease_of_use" id="strongly_disagree">
-                <label for="strongly_disagree">Indifferent</label>
-                <input type="radio" name="ease_of_use" id="strongly_disagree">
-                <label for="strongly_disagree">Slightly Agree</label>
-                <input type="radio" name="ease_of_use" id="strongly_disagree">
-                <label for="strongly_disagree">Strongly Agree</label>
-            </div>
-    
-            <div class="question">
-                <h3>Are you interested in working out?</h3>
-                <select name="workout_question" id="workout_question">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </div>
-
-            <div class="question">
-                <h3>If yes, let us know what muscle groups you are interested in working out!</h3>
-                <input type="checkbox" name="muscles" id="abs">
-                <label for="abs">Abs</label><br>
-                <input type="checkbox" name="muscles" id="arms">
-                <label for="arms">Arms</label><br>
-                <input type="checkbox" name="muscles" id="back">
-                <label for="back">Back</label><br>
-                <input type="checkbox" name="muscles" id="chest">
-                <label for="chest">Chest</label><br>
-                <input type="checkbox" name="muscles" id="legs">
-                <label for="legs">Legs</label>
-            </div>
-
-            <div class="question">
-                <h3>Do you have any additional feedback on the website?</h3>
-                <textarea name="additional_comments" id="additional_comments" cols="50" rows="4"></textarea>
-            </div>
-
-            <div class="center">
-                <input type="submit" value="Submit">
-            </div>
-    
-        </form>
+    <!-- Tab content -->
+    <div id="Client" class="tabcontent">
+        <h3>Client Information</h3>
+        <p>Tell us a bit about you.</p>
+        <br>
+            <label for="nutAllergy">
+                <input type="checkbox" id="nutAllergy" onchange="populateListProductChoices('displayProduct', this.id, 'lactoseIntolerance', 'organic')">
+                Are you allergic to nuts?
+            </label>
+        <br>
+            <label for="lactoseIntolerance">
+                <input type="checkbox" id="lactoseIntolerance" onchange="populateListProductChoices('displayProduct', 'nutAllergy', this.id, 'organic')">
+                Are you lactose-intolerant?
+            </label>
+        <br>
+            <label for="organic">
+                <input type="checkbox" id="organic" onchange="populateListProductChoices('displayProduct', 'nutAllergy', 'lactoseIntolerance', this.id)">
+                Do you prefer organic food?
+            </label>
     </div>
-    <footer>Website designed by Mackador Warfa</footer>
+
+    <div id="Products" class="tabcontent">
+        <h3>Your targeted products</h3>
+        <p>We preselected products based on your restrictions.</p>
+        Choose items to buy:
+        <div id="displayProduct"></div>
+        <button id="addCart" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+        </button>
+    </div>
+
+    <div id="Cart" class="tabcontent">
+        <h3>Cart</h3>
+        <p>Here is your cart.</p>
+        <div id="displayCart"></div>
+    </div>
+
+    <footer>
+        Website designed by Mackador Warfa using starter files from SEG3125
+    </footer>
+
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+
 </body>
 </html>
