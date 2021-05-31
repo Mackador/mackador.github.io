@@ -7,63 +7,63 @@ var products = [
         nutFree: false,
         lactoseIntolerance: false,
         organic: false,
-        price: 0.79
+        price: 0.80
     },
     {
         name: "Almonds",
         nutFree: false,
         lactoseIntolerance: true,
         organic: true,
-        price: 1.09
+        price: 1.10
     },
     {
         name: "Yogurt",
         nutFree: true,
         lactoseIntolerance: false,
         organic: false,
-        price: 1.29
+        price: 1.30
     },
     {
         name: "Pizza slice",
         nutFree: true,
         lactoseIntolerance: false,
         organic: false,
-        price: 1.49
+        price: 1.50
     },
     {
         name: "Brocoli",
         nutFree: true,
         lactoseIntolerance: true,
         organic: true,
-        price: 1.99
+        price: 2.00
     },
     {
         name: "Bread",
         nutFree: true,
         lactoseIntolerance: true,
         organic: true,
-        price: 2.39
+        price: 2.40
     },
     {
         name: "Milk",
         nutFree: true,
         lactoseIntolerance: false,
         organic: false,
-        price: 4.49
+        price: 4.50
     },
     {
         name: "Chicken sandwich",
         nutFree: true,
         lactoseIntolerance: true,
         organic: false,
-        price: 4.99
+        price: 5.00
     },
     {
         name: "Salmon",
         nutFree: true,
         lactoseIntolerance: true,
         organic: false,
-        price: 9.99
+        price: 10.00
     }
 ];
 
