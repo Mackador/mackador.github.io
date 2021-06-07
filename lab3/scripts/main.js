@@ -64,13 +64,14 @@ function populateListProductChoices(displayProduct, nutAllergy, lactoseIntoleran
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
 
-function selectedItems(){
+function selectedItems() {
 
     var ele = document.getElementsByName("product");
     var chosenProducts = [];
 
-    var c = document.getElementById('displayCart');
-    c.innerHTML = "";
+    var dC = document.getElementById('displayCart');
+    var t = document.getElementById('total');
+    dC.innerHTML = "";
 
     // build list of selected item
     var para = document.createElement("P");
@@ -83,7 +84,16 @@ function selectedItems(){
     }
     
     // add paragraph and total price
-    c.appendChild(para);
-    c.appendChild(document.createTextNode("The total price is $" + getTotalPrice(chosenProducts)));
+    dC.appendChild(para);
+    t.appendChild(document.createTextNode("The total price is $" + getTotalPrice(chosenProducts)));
     
+}
+
+function order() {
+    p = document.getElementById("Products");
+    c = document.getElementById("Cart");
+    pr = document.getElementById("PreferencesAndRestrictions");
+    p.innerHTML = "Your order has been placed!"
+    c.innerHTML = "";
+    pr.innerHTML = "";
 }

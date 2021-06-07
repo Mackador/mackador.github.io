@@ -17,14 +17,15 @@ header {
     grid-column: 1 / 4;
 }
 
-.left-side {
+.left-panel {
     border-style: solid;
     border-color: rgb(0, 54, 3);
     background-color: rgb(227, 255, 229);
     grid-column: 1 / 2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding: 1rem;
     text-align: center;
-    padding: 2rem;
 }
 
 main {
@@ -32,18 +33,20 @@ main {
     border-color: rgb(0, 54, 3);
     background-color: rgb(232, 255, 233);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 2rem;
+    font-size: 20px;
+    padding: 1rem;
     text-align: center;
     grid-column: 2 / 3;
 }
 
-.right-side {
+.right-panel {
     border-style: solid;
     border-color: rgb(0, 54, 3);
     background-color: rgb(227, 255, 229);
     grid-column: 3 / 4;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 2rem;
+    font-size: 20px;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -56,4 +59,25 @@ footer {
     padding: 2rem;
     text-align: center;
     grid-column: 1 / 4;
+}
+
+.block {
+    background-color: #b1ffb4;
+    border: solid;
+    border-color: rgb(0, 54, 3);
+    color: rgb(0, 0, 0);
+    padding: 0.75rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#displayCart {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#donate {
+    font-size: 15px;
 }

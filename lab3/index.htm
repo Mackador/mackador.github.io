@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fresh Mart</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
     <script src="scripts/groceries.js"></script>
     <script src="scripts/main.js"></script>
 </head>
-<body>
 
-    <header class="pink section">Fresh Mart</header>
+<body onload="populateListProductChoices('displayProduct', 'nutAllergy', 'lactoseIntolerance', 'organic')">
 
-    <div class="left-side blue section">
+    <header>Fresh Mart</header>
+
+    <div class="left-panel">
         <div id="PreferencesAndRestrictions" class="tabcontent">
             <h3>Your preferences and restrictions</h3>
             <p>Let us know if you have any restrictions on your diet by selecting what applies to you below!</p>
@@ -34,7 +35,7 @@
         </div>
     </div>
 
-    <main class="section coral">
+    <main>
         <div id="Products" class="tabcontent">
             <h3>Your targeted products</h3>
             <p>We created a list of products based on your restrictions. Pick which items you'd like to purchase below!</p>
@@ -45,15 +46,34 @@
         </div>
     </main>
 
-    <div class="right-side yellow section">
+    <div class="right-panel">
         <div id="Cart" class="tabcontent">
             <h3>Your cart</h3>
-            <p>Here are the products you've chosen to purchase.</p>
+            <p>Here are the products you've chosen to purchase!</p>
             <div id="displayCart"></div>
+            <div id="total"></div>
+            <p>
+                <div id="donate">
+                    <p>Would you like to donate to the local children's hospital?</p>
+                    <label for="yesDonate">
+                        <input type="radio" name="donate" id="yesDonate">
+                        Yes
+                    </label>
+                    <label for="noDonate">
+                        <input type="radio" name="donate" id="noDonate">
+                        No
+                    </label>
+                </div>
+            </p>
+            <p>
+                <button id="placeOrder" type="button" class="block" onclick="order()">
+                    Place your order
+                </button>
+            </p>
         </div>
     </div>
 
-    <footer class="green section">Website designed by Mackador Warfa using starter files from SEG3125</footer>
+    <footer>Website designed by Mackador Warfa using starter files from SEG3125</footer>
     
 </body>
 </html>
