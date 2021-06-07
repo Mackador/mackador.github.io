@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+
+    <header class="pink section">Fresh Mart</header>
+
+    <div class="left-side blue section">
+        <div id="PreferencesAndRestrictions" class="tabcontent">
+            <h3>Your preferences and restrictions</h3>
+            <p>Let us know if you have any restrictions on your diet by selecting what applies to you below!</p>
+                <label for="nutAllergy">
+                    <input type="checkbox" id="nutAllergy" onchange="populateListProductChoices('displayProduct', this.id, 'lactoseIntolerance', 'organic')">
+                    Are you allergic to nuts?
+                </label>
+            <br>
+                <label for="lactoseIntolerance">
+                    <input type="checkbox" id="lactoseIntolerance" onchange="populateListProductChoices('displayProduct', 'nutAllergy', this.id, 'organic')">
+                    Are you lactose-intolerant?
+                </label>
+            <br>
+                <label for="organic">
+                    <input type="checkbox" id="organic" onchange="populateListProductChoices('displayProduct', 'nutAllergy', 'lactoseIntolerance', this.id)">
+                    Do you prefer organic food?
+                </label>
+        </div>
+    </div>
+
+    <main class="section coral">
+        <div id="Products" class="tabcontent">
+            <h3>Your targeted products</h3>
+            <p>We created a list of products based on your restrictions. Pick which items you'd like to purchase below!</p>
+            <p><div id="displayProduct"></div></p>
+            <button id="addCart" type="button" class="block" onclick="selectedItems()">
+                Add selected items to cart
+            </button>
+        </div>
+    </main>
+
+    <div class="right-side yellow section">
+        <div id="Cart" class="tabcontent">
+            <h3>Your cart</h3>
+            <p>Here are the products you've chosen to purchase.</p>
+            <div id="displayCart"></div>
+        </div>
+    </div>
+
+    <footer class="green section">Website designed by Mackador Warfa using starter files from SEG3125</footer>
+    
+</body>
+</html>
+
