@@ -1,0 +1,25 @@
+.navbar {
+    background-color: #0d6efd;
+    padding-left: 3%;
+    color: white;
+}
+
+h2 {
+    padding-right: 2%;
+}
+
+.btn {
+    border: solid black 1px;
+}
+
+.card {
+    border: solid black 1px;
+}
+
+.card-img-top {
+    border: solid black 1px;
+}
+
+#booked {
+    visibility: hidden;
+}
